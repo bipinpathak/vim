@@ -37,3 +37,6 @@ colorscheme gruvbox
 nmap<C-n> :NERDTreeToggle<CR> 
 nmap<C-c> :w <Enter> :!g++ % <Enter>
 nmap<C-r> :!./a.out <Enter>
+
+"auto
+:autocmd BufNewFile *.cpp 0r ~/Documents/codes/template.cpp 
