@@ -34,7 +34,7 @@ set bg=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
-"mapings
+"mappings
 nmap<C-n> :NERDTreeToggle<CR> 
 nmap<C-c> :w <Enter> :!g++ % <Enter>
 nmap<C-r> :!./a.out <Enter>
