@@ -14,13 +14,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 set completeopt-=preview
 
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
+
+"editor
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'Raimondi/delimitMate'
+
+"ui
 Plugin 'preservim/nerdtree'
-Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 
+"theme
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 
 set termguicolors
@@ -28,6 +34,6 @@ set bg=dark
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
-map<C-n> :NERDTreeToggle<CR> 
-map<C-c> :w <Enter> :!g++ % <Enter>
-map<C-r> :!./a.out
+nmap<C-n> :NERDTreeToggle<CR> 
+nmap<C-c> :w <Enter> :!g++ % <Enter>
+nmap<C-r> :!./a.out <Enter>
