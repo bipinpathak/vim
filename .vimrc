@@ -5,15 +5,21 @@ set noerrorbells
 set nocompatible
 set tabstop=4 
 set softtabstop=4
+set shiftwidth=4
+set splitright
+set splitbelow
 set expandtab
 set autoindent
 set number relativenumber
-set mouse=n
+set termguicolors
 set autoread
 set noswapfile
 set incsearch
 set rtp+=~/.vim/bundle/Vundle.vim
 set completeopt-=preview
+set clipboard=unnamedplus
+set bg=dark
+set mouse=n
 
 call vundle#begin()
 
@@ -21,18 +27,22 @@ Plugin 'VundleVim/Vundle.vim'
 
 "editor
 Plugin 'ycm-core/YouCompleteMe'
-Plugin 'Raimondi/delimitMate'
+Plugin 'tpope/vim-endwise'
+Plugin 'rstacruz/vim-closer'
+Plugin 'psliwka/vim-smoothie'
+Plugin 'unblevable/quick-scope'
+Plugin 'dense-analysis/ale'
 
 "ui
 Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 "theme
 Plugin 'morhetz/gruvbox'
 call vundle#end()
 
-set termguicolors
-set bg=dark
+let g:airline_theme='gruvbox'
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
