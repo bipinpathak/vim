@@ -50,7 +50,7 @@ colorscheme gruvbox
 nmap<C-n> :NERDTreeToggle<CR> 
 
 "compile and run
-nmap<C-c> :w <Enter> :!g++ % <Enter>
+nmap<C-c> :!g++ % <Enter>
 nmap<C-r> :!./a.out <Enter>
 
 "window navigation
