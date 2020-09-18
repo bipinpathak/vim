@@ -8,7 +8,6 @@ set softtabstop=4
 set shiftwidth=4
 set splitright
 set splitbelow
-set expandtab
 set autoindent
 set number relativenumber
 set termguicolors
@@ -29,25 +28,26 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'tpope/vim-endwise'
 Plugin 'rstacruz/vim-closer'
-Plugin 'psliwka/vim-smoothie'
 Plugin 'unblevable/quick-scope'
 Plugin 'dense-analysis/ale'
 
-"ui
+"navigation
 Plugin 'preservim/nerdtree'
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/fzf'
+
+"ui and theme
+Plugin 'psliwka/vim-smoothie'
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-"theme
-Plugin 'morhetz/gruvbox'
 call vundle#end()
 
 let g:airline_theme='gruvbox'
 let g:gruvbox_italic=1
 colorscheme gruvbox
 
-"nerdtree
-nmap<C-n> :NERDTreeToggle<CR> 
 
 "compile and run
 nmap<C-c> :!g++ % <Enter>
@@ -58,6 +58,12 @@ map<C-h> <C-w>h
 map<C-j> <C-w>j
 map<C-k> <C-w>k
 map<C-l> <C-w>l
+
+"fzf
+nmap ; :Files<CR>
+
+"nerdtree
+nmap<C-n> :NERDTreeToggle<CR> 
 
 "auto
 :autocmd BufNewFile *.cpp 0r ~/Documents/codes/template.cpp 
