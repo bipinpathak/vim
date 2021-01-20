@@ -19,6 +19,7 @@ set completeopt-=preview
 set clipboard=unnamedplus
 set bg=dark
 set mouse=n
+set autochdir
 
 call vundle#begin()
 
@@ -47,11 +48,11 @@ call vundle#end()
 let g:airline_theme='gruvbox'
 let g:gruvbox_italic=1
 colorscheme gruvbox
-
+hi Normal guibg=NONE ctermbg=NONE
 
 "compile and run
-nmap<C-c> :!g++ % <Enter>
-nmap<C-r> :!./a.out <Enter>
+nmap<C-c> :!g++ % -Dbipinpathak -Wall -Wextra -pedantic -std=c++17 -O2 -Wshadow -Wformat=2 -Wfloat-equal -Wconversion -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover -fstack-protector <Enter>
+nmap<C-z> :!./a.out <Enter>
 
 "window navigation
 map<C-h> <C-w>h
@@ -66,4 +67,4 @@ nmap ; :Files<CR>
 nmap<C-n> :NERDTreeToggle<CR> 
 
 "auto
-:autocmd BufNewFile *.cpp 0r ~/Documents/codes/template.cpp 
+:autocmd BufNewFile *.cpp 0r ~/Documents/code_here/template.cpp 
